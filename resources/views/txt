@@ -1,1 +1,4 @@
-<a class="dropdown-item" href="{{ route('#') }}">いいねされた案件</a>
+            $bookmark->notifications()->create([
+                'user_id' => $post->user->id,
+                'message' => '<a href="' .route('users.show', Auth::id()) . '">' . Auth::user()->name . '</a>から いいね が届きました！',
+            ]);

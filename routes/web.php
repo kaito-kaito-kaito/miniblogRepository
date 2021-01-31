@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/users/{id}', 'UserController@show');
+Route::get('/users/{id}', 'UserController@show')->name('users.show');
 
 
 Route::middleware('auth')->group(function(){
@@ -48,5 +48,8 @@ Route::prefix('posts')->as('posts.')->group(function(){
         Route::get('/','DestroyController@index')->name('index'); 
     });
 
+    Route::middleware('auth')->prefix('notifications')->as('notifications.')->group(function () {
+        Route::get('/', 'NotificationController@index')->name('index');
+    });
 
 

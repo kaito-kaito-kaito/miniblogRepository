@@ -10,6 +10,7 @@ class Notification extends Model
     {
         return $this->morphTo();
     }
+
     
     protected $fillable = ['user_id','noticeable','message'];
 
