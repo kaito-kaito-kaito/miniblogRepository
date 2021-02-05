@@ -9,9 +9,6 @@
     <div>{{ Session::get('message') }}</div>
   @endif
   
-  @if ($user->filepath)
-  <img src="{{ $user->image_url }}" alt="{{ $user->name }}">
-  @endif
   <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-7">
@@ -21,6 +18,11 @@
         <div class="card-body">
           <form method="POST" action="{{ route('users.update') }}" enctype="multipart/form-data">
             @csrf
+
+            @if ($user->filepath)
+            <img src="{{ $user->image_url }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px">
+            @endif
+            
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right">プロフィール画像</label>
 
