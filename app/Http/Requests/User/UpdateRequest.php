@@ -28,6 +28,7 @@ class UpdateRequest extends FormRequest
             'name' => 'required|string|max:255',
             'email' => 'required|string|unique:users,email,' . $this->user()->id . '|max:255',
             'file' => 'image',
+            'career' => 'required|string|min:20|max:2000',
         ];
     }
 }

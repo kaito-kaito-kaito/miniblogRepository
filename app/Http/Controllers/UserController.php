@@ -25,7 +25,12 @@ class UserController extends Controller
     {
 
         $user = Auth::user();
-        $user->fill(['filepath' => $request->file->store('user/images')] + $request->validated());
+        $form = $request->validated();
+        if($request->file !== null)
+        {
+            $form += ['filepath' => $request->file->store('user/images')];
+        }
+        $user->fill($form);
         $user->save();
         return redirect()->back()->with(['message' => '更新したンゴ']);
     }

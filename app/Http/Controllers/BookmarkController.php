@@ -23,7 +23,7 @@ class BookmarkController extends Controller
             $bookmark->save();
             $bookmark->notifications()->create([
                 'user_id' => $post->user->id,
-                'message' => '<a href="' .route('users.show', Auth::id()) . '">' . Auth::user()->name . '</a>から いいね が届きました！',
+                'message' => '<a href="' .route('users.show', Auth::id()) . '">' . Auth::user()->name . '</a>から<a href="' .route('posts.show', $post) . '">' . $post->title . '</a> に いいね が届きました！',
             ]);
         }
         return redirect()->back();

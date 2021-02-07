@@ -13,13 +13,17 @@ class User extends Authenticatable
 {
     use Notifiable, SoftDeletes;
 
+    const CATEGORY_DEVELOPER = 'Developer';
+
+    const CATEGORY_DESIGNER = 'Designer';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','filepath',
+        'name', 'email', 'password','filepath', 'career', 'category'
     ];
 
     /**
@@ -58,4 +62,13 @@ class User extends Authenticatable
         return $this->morphOne(Notification::class,'noticeable');
     }
     
+    public function isDeveloper()
+    {
+        return $this->category === self::CATEGORY_DEVELOPER;
+    }
+    
+    public function isDesigner()
+    {
+        return $this->category === self::CATEGORY_DESIGNER;
+    }
 }

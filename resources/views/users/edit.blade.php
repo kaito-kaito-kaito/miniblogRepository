@@ -20,8 +20,12 @@
             @csrf
 
             @if ($user->filepath)
+            <div class="text-center">
             <img src="{{ $user->image_url }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px">
+            </div>
             @endif
+
+            <p></p>
             
             <div class="form-group row">
               <label class="col-md-4 col-form-label text-md-right">プロフィール画像</label>
@@ -44,6 +48,14 @@
 
               <div class="col-md-6">
               <input name="email" type="email" class="form-control" value="{{ $user->email }}" />
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="col-md-4 col-form-label text-md-right">経歴など</label>
+
+              <div class="col-md-6">
+              <textarea name="career" class="form-control">{{ $user->career }}</textarea>
               </div>
             </div>
 

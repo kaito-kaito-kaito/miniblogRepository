@@ -9,7 +9,7 @@ class Post extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['body'];
+    protected $fillable = ['title', 'body'];
 
     public function user()
     {
