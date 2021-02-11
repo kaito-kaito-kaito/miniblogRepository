@@ -4,7 +4,7 @@
   <div class="container">
             <form action="{{ route('search.index') }}" method="GET">
                 <div class="d-flex">
-                <input type="text" name="q" class="form-control" style="width: 500px" placeholder="入力してください" value="{{$keyword}}" required autofocus>
+                <input type="text" name="q" class="form-control" style="width: 500px" placeholder="入力して下さい" value="{{$keyword}}" required autofocus>
                 <button type="submit" class="btn btn-primary">検索</button>
                 </div>
             </form>
@@ -12,12 +12,6 @@
         <br>
   </div>
   
-  <div class="col-sm-8" style="text-align:right;">
-  <div class="paginate">
-  {{ $data->appends(Request::only('q'))->links() }}
-  </div>
-  </div>
-
   <div class="container">
     @foreach($posts as $post)
       <div class="card">
@@ -35,6 +29,14 @@
       </div>
       <br>
     @endforeach
+  </div>
+
+  <div class="container">
+      <div class="col-sm-8" style="text-align:right;">
+          <div class="paginate">
+          {{ $posts->appends(Request::only('q'))->links() }}
+          </div>
+      </div>
   </div>
   
   
