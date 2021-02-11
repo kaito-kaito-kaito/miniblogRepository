@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users/{user}', 'UserController@show')->name('users.show');
 
 
+
 Route::middleware('auth')->group(function(){
     Route::get('me', 'UserController@edit')->name('users.edit');
     Route::post('me', 'UserController@update')->name('users.update');
@@ -52,4 +53,5 @@ Route::prefix('posts')->as('posts.')->group(function(){
         Route::get('/', 'NotificationController@index')->name('index');
     });
 
+    Route::get('/search', 'SearchController@index')->name('search.index');
 

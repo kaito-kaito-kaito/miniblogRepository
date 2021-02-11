@@ -11,7 +11,7 @@
           <form method="POST" action="{{ route('posts.store') }}">
             @csrf
             <div class="form-group row">
-              <label for="title" class="col-md-4 col-form-label text-md-right">タイトル</label>
+              <label for="title" class="col-md-4 col-form-label text-md-right  font-weight-bold">タイトル</label>
 
               <div class="col-md-6">
                 <input id="title" type="text" class="form-control" name="title" value="" required autofocus>

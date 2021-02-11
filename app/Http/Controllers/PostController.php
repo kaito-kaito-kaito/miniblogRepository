@@ -26,7 +26,7 @@ class PostController extends Controller
         $post->user()->associate(Auth::user()); // ★
         $post->save();
     
-        return redirect()->to('/'); // '/' へリダイレクト
+        return redirect()->to('search'); // '/' へリダイレクト
     }
     public function delete(Post $post)
     {

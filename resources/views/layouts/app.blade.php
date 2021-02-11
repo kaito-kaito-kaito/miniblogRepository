@@ -59,6 +59,7 @@
                                 @if (Auth::user()->isDeveloper())
                                     <a class="dropdown-item" href="{{ route('posts.create') }}">投稿する</a>
                                 @endif
+                                <a class="dropdown-item" href="{{ route('search.index') }}">案件一覧</a>
                                 @if (Auth::user()->isDesigner())
                                 <a class="dropdown-item" href="{{ route('bookmarks.index') }}">いいね</a>
                                 @endif
