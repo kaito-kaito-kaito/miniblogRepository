@@ -20,5 +20,6 @@
             </div>      
         </div>
     </div>
+    <a class="text-center" href="{{ route('notifications.index') }}">通知一覧に戻る</a>
 </div>
 @endsection

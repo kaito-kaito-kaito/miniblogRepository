@@ -20,10 +20,7 @@
               <button type="submit" class="btn btn-success">いいね</button>
             </form>
             @else
-            <form method="POST" action="{{ route('bookmarks.remove', $post->id) }}">
-              @csrf
-              <button type="submit" class="btn btn-danger">いいねを解除する</button>
-            </form>            
+              <button id="button" disabled="disabled">いいねを送りました</button>        
           @endunless
           @endif
           @if(Auth::id() === $post->user_id)
@@ -35,7 +32,21 @@
         @endauth
       </div>
     </div>
-    
-    <a class="text-center" href="{{ route('search.index') }}">案件一覧に戻る</a>
+    @if(Auth::id() === $post->user_id)
+    <p class="card-text font-weight-bold">この案件にいいねしたデザイナー</p>
+    @endif
+    <div class="container">
+    @foreach($bookmarkUsers as $bookmarkUser)
+      <div class="card">
+        <div class="card-header">
+        @if ($bookmarkUser->filepath)
+        <img src="{{ $bookmarkUser->image_url }}" alt="{{ $bookmarkUser->name }}" class="img-thumbnail" style="width: 100px" >
+        @endif
+        {{ $bookmarkUser->name }}
+        </div>
+      </div>
+      <br>
+    @endforeach
+    </div>
   </div>
 @endsection

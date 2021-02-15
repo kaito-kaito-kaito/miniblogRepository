@@ -42,8 +42,9 @@ class PostController extends Controller
     {
         $post->load('replies.user');
         $bookmarked = $post->bookmarkingUsers->contains(Auth::id());
+        $bookmarkUsers = Auth::id() === $post->user_id ? $post->bookmarkingUsers : collect([]);
 
-        return view('posts.show',['post' => $post, 'bookmarked' =>$bookmarked]);
+        return view('posts.show',['post' => $post, 'bookmarked' =>$bookmarked, 'bookmarkUsers' => $bookmarkUsers]);
     }
     public function reply(Request $request, Post $post)
     {
