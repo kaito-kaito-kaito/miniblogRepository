@@ -1,4 +1,2 @@
-            $bookmark->notifications()->create([
-                'user_id' => $post->user->id,
-                'message' => '<a href="' .route('users.show', Auth::id()) . '">' . Auth::user()->name . '</a>から いいね が届きました！',
-            ]);
+        <form method="POST" action="{{ route('messages.start') }}">
+        </form>

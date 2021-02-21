@@ -40,14 +40,14 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('Category') }}</label>
+                            <label for="category" class="col-md-4 col-form-label text-md-right">{{ __('職種') }}</label>
 
                             <div class="col-md-6" style="padding-top: 8px">
                                 <input id="category-1" type="radio" name="category" value="Designer" required autocomplete="category">
-                                <label for="category-1">Designer</label>
+                                <label for="category-1">デザイナー</label>
 
                                 <input id="category-2" type="radio" name="category" value="Developer" required autocomplete="category">
-                                <label for="category-2">Developer</label>
+                                <label for="category-2">ディベロッパー</label>
 
                                 @error('category')
                                     <span class="invalid-feedback" role="alert">

@@ -71,4 +71,14 @@ class User extends Authenticatable
     {
         return $this->category === self::CATEGORY_DESIGNER;
     }
+
+    public function groups()
+    {
+        return $this->hasMany(MessageGroup::class);
+    }
+
+    public function members()
+    {
+        return $this->hasMany(MessageMember::class);
+    }
 }

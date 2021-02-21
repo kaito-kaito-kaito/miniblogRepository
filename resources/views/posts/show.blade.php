@@ -43,6 +43,11 @@
         <img src="{{ $bookmarkUser->image_url }}" alt="{{ $bookmarkUser->name }}" class="img-thumbnail" style="width: 100px" >
         @endif
         {{ $bookmarkUser->name }}
+        <div class="d-flex justify-content-end">
+        <form method="GET" action="{{ route('messages.start', [$post, $bookmarkUser]) }}">
+        <button type="submit" class="btn btn-success">いいねを返してメッセージする</button>
+        </form>
+        </div>
         </div>
       </div>
       <br>
