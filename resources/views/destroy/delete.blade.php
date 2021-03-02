@@ -9,7 +9,7 @@
 
         <div class="card-body">
         <div class="form-group row">
-        <label for="body" class="col-md-9 col-form-label ">一度退会した場合、ユーザー情報はすべて消去され、当サイトを再び利用する際は再度の登録が必要となります。よろしいで候？</label>        
+        <label for="body" class="col-md-9 col-form-label ">一度退会した場合、ユーザー情報はすべて消去され、当サイトを再び利用する際は再度の登録が必要となります。よろしいですか？</label>        
         </div>
         
             <form method="post" action="{{ route('users.delete') }}">

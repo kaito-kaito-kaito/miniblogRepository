@@ -1,2 +1,31 @@
-        <form method="POST" action="{{ route('messages.start') }}">
+        <form method="GET" action="{{ route('messages.show') }}">
         </form>
+
+        <form method="POST" action="{{ route('messages.send') }}">
+        </form>
+
+        <div class="container">
+ 
+                <div class="d-flex">
+                <input id="body" type="text" class="form-control" style="width: 500px" placeholder="入力して下さい" required autofocus>
+                <button type="submit" class="btn btn-primary">送信</button>
+                </div>
+
+        </div>        
+        <br>
+        <br>
+        </div>
+        <div class="container mt-4">
+        @foreach($messages as $message)
+        <div class="card">
+            <div class="card-header">
+            @foreach($message->members as $member)
+            {{ $member->user->name }}
+            @endforeach
+            </div>
+            <div class="card-body">
+            <p class="card-text">{{ $message->body }}</p>
+            </div>
+        </div>
+        @endforeach
+    </div>

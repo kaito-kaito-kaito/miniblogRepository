@@ -60,5 +60,6 @@ Route::prefix('posts')->as('posts.')->group(function(){
         Route::get('/post/{post}/user/{user}/message', 'MessageController@start')->name('messages.start');
         Route::get('/message-groups', 'MessageController@index')->name('messages.index');
         Route::get('/message-group/{messageGroup}', 'MessageController@show')->name('messages.show');
+        Route::post('/message-group/{messageGroup}', 'MessageController@send')->name('messages.send');
     });
 

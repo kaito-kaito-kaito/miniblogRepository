@@ -8,12 +8,12 @@ class MessageGroup extends Model
 {
     protected $fillable = ['post_id','user_id','last_body','last_posted_at'];
 
-    public function posts()
+    public function post()
     {
         return $this->belongsTo(Post::class);
     }
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }
@@ -26,5 +26,10 @@ class MessageGroup extends Model
     public function messages()
     {
         return $this->hasManyThrough(Message::class, MessageMember::class);
+    }
+
+    public function notifications()
+    {
+        return $this->morphOne(Notification::class,'noticeable');
     }
 }

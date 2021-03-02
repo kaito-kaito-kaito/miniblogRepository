@@ -13,7 +13,7 @@ class MessageMember extends Model
         return $this->belongsTo(MessageGroup::class);
     }
 
-    public function users()
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

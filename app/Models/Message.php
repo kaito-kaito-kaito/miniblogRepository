@@ -8,8 +8,8 @@ class Message extends Model
 {
     protected $fillable = ['message_member_id','body'];
 
-    public function members()
+    public function member()
     {
-        return $this->belongsTo(MessageMember::class);
+        return $this->belongsTo(MessageMember::class, 'message_member_id');
     }
 }

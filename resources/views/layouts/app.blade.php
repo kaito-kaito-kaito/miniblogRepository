@@ -57,7 +57,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 @if (Auth::user()->isDeveloper())
-                                    <a class="dropdown-item" href="{{ route('posts.create') }}">投稿する</a>
+                                <a class="dropdown-item" href="{{ route('posts.create') }}">投稿する</a>
                                 @endif
                                 <a class="dropdown-item" href="{{ route('search.index') }}">案件を探す</a>
                                 @if (Auth::user()->isDesigner())
@@ -65,6 +65,7 @@
                                 @endif
                                 <a class="dropdown-item" href="{{ route('users.edit') }}">ユーザー情報を変更する</a>
                                 <a class="dropdown-item" href="{{ route('notifications.index') }}">通知</a>
+                                <a class="dropdown-item" href="{{ route('messages.index') }}">メッセージ</a>
                                 <a class="dropdown-item" href="{{ route('destroy.index') }}">退会する</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

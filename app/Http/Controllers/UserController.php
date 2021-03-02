@@ -32,7 +32,7 @@ class UserController extends Controller
         }
         $user->fill($form);
         $user->save();
-        return redirect()->back()->with(['message' => '更新したンゴ']);
+        return redirect()->back()->with(['message' => '更新しました！']);
     }
 
     public function delete()
