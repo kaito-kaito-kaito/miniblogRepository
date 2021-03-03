@@ -71,7 +71,7 @@ class MessageController extends Controller
         $member = $messageGroup->members()->firstOrCreate(['user_id' => Auth::id()]);
         $message = new Message;
         $message->fill($request->all() + ['message_member_id' => $member->id])->save();
-
+        
         return redirect()->route('messages.show', $messageGroup);
         //やること　フォームリクエスト作成、メッセージテーブルにデータ登録(参考；案件投稿)
     }
