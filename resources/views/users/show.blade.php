@@ -9,12 +9,12 @@
                     @if ($user->filepath)
                     <img src="{{ $user->image_url }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px" >
                     @endif
-                    <p>{{ $user->name }}</p>
-                    <p> {{ $user->email }} </p>
+                    <strong>{{ $user->name }}</strong><br>
+                    {{ $user->email }}
                 </div>
-                <div>
+                <div class="card-body">
                     @if ($user->career)
-                        <p>{!! nl2br(e($user->career)) !!}</p>
+                        {!! nl2br(e($user->career)) !!}
                     @endif
                 </div>
             </div>      

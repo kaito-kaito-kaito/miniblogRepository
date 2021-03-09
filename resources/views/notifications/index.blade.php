@@ -10,5 +10,8 @@
         </div>
     </div>
 @endforeach
+@if(empty($notification))
+現在、通知はありません
+@endif
 </div>
 @endsection

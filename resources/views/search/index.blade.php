@@ -23,7 +23,6 @@
         </div>
         <div class="card-body">
         　<p class="card-text font-weight-bold">{{ $post->title }}</p>
-          <p class="card-text">{{ $post->body }}</p>
           <p class="card-text"><a href="{{ route('posts.show', $post->id) }}">詳細を見る</a></p>
         </div>
       </div>

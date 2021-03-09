@@ -37,7 +37,7 @@ class PostController extends Controller
 
         $post->delete();
 
-        return redirect()->to('/');
+        return redirect()->to('search');
     }
     public function show(Post $post)
     {

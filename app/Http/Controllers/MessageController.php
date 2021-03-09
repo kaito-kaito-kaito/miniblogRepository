@@ -52,8 +52,8 @@ class MessageController extends Controller
         ->whereHas('members', function($query) {
             $query->where('user_id', Auth::id());
         })
-        ->orderBy('post_id', 'desc')
-        ->paginate();
+        ->orderBy('last_posted_at', 'desc')
+        ->paginate(10);
 
         return view('messages.index', [ 'messageGroups' => $messageGroups ]);
         //やること　一覧の取得処理、blade(参考；案件一覧)
@@ -71,6 +71,8 @@ class MessageController extends Controller
         $member = $messageGroup->members()->firstOrCreate(['user_id' => Auth::id()]);
         $message = new Message;
         $message->fill($request->all() + ['message_member_id' => $member->id])->save();
+        $messageGroup->update(['last_body' => $request->body]);
+        $messageGroup->update(['last_posted_at' => $message->created_at]);
         
         return redirect()->route('messages.show', $messageGroup);
         //やること　フォームリクエスト作成、メッセージテーブルにデータ登録(参考；案件投稿)
