@@ -13,9 +13,8 @@
   <div class="row justify-content-center">
     <div class="col-md-7">
       <div class="card">
-        <div class="card-header">ユーザー情報</div>
-
         <div class="card-body">
+        <h5 class="card-subtitle mb-2 text-muted">ユーザー情報</h5>
           <form method="POST" action="{{ route('users.update') }}" enctype="multipart/form-data">
             @csrf
 

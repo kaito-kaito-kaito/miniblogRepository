@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+<label class="font-weight-bold">通知一覧</label>
 @foreach($notifications as $notification)
     <div class="card mb-2">
         <div class="card-body">

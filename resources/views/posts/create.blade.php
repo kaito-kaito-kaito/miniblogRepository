@@ -5,9 +5,8 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">案件</div>
-
         <div class="card-body">
+        <h5 class="card-subtitle mb-2 text-muted">案件</h5>
           <form method="POST" action="{{ route('posts.store') }}">
             @csrf
             <div class="form-group row">
