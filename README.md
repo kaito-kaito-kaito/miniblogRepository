@@ -4,6 +4,8 @@ DtoDは個人ゲーム開発者(プログラマー)、デザイナー向けの�
 
 
 # イメージ画像
+![トップ画面](https://user-images.githubusercontent.com/77225648/111067447-a5ed7500-8507-11eb-8128-549e1f42ea51.png)
+
 ![投稿画面](https://user-images.githubusercontent.com/77225648/111027539-3bb7d000-8434-11eb-971f-55fc1d99ca75.png)
 
 ![ユーザー情報編集画面](https://user-images.githubusercontent.com/77225648/111027562-58ec9e80-8434-11eb-85bb-f7c5459be2eb.png)
@@ -17,7 +19,7 @@ DtoDは個人ゲーム開発者(プログラマー)、デザイナー向けの�
 ![メッセージ画面](https://user-images.githubusercontent.com/77225648/111027601-918c7800-8434-11eb-81f4-904dfda8f9a3.png)
 
 # 特徴
-![lean canvas](https://user-images.githubusercontent.com/77225648/110230417-21718400-7f54-11eb-9214-acaba71820dc.png)
+![リーンキャンバス](https://user-images.githubusercontent.com/77225648/111067463-b69deb00-8507-11eb-8ce9-e46ad266d554.png)
 
 
 # 使用した言語・技術・ライブラリなど
