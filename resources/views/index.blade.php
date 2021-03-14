@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="jumbotron">
+<div class="jumbotron" style="margin-top: -1.5rem;">
         <div class="container">
           <h1 class="display-5">
           個人ゲーム開発向け<br>
