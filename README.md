@@ -16,7 +16,7 @@ DtoDは個人ゲーム開発者(プログラマー)、デザイナー向けの�
 
 ![案件詳細画面](https://user-images.githubusercontent.com/77225648/111027873-54c18080-8436-11eb-87f0-2562559be09a.png)
 
-![メッセージ画面](https://user-images.githubusercontent.com/77225648/111027601-918c7800-8434-11eb-81f4-904dfda8f9a3.png)
+![メッセージ画面](https://user-images.githubusercontent.com/77225648/111617331-50c2a380-8826-11eb-972b-76563619042b.png)
 
 # 特徴
 ![リーンキャンバス](https://user-images.githubusercontent.com/77225648/111067463-b69deb00-8507-11eb-8ce9-e46ad266d554.png)
