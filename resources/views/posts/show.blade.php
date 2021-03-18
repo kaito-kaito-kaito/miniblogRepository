@@ -39,8 +39,8 @@
     @foreach($bookmarkUsers as $bookmarkUser)
       <div class="card">
         <div class="card-header">
-        @if ($bookmarkUser->filepath)
-        <img src="{{ $bookmarkUser->image_url }}" alt="{{ $bookmarkUser->name }}" class="img-thumbnail" style="width: 100px" >
+        @if ($bookmarkUser->base64Image)
+        <img src="{{ $bookmarkUser->base64Image }}" alt="{{ $bookmarkUser->name }}" class="img-thumbnail" style="width: 100px" >
         @endif
         {{ $bookmarkUser->name }}
         <div class="d-flex justify-content-end">
