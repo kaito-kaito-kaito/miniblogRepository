@@ -23,7 +23,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','filepath', 'career', 'category'
+        'name', 'email', 'password','filepath', 'image', 'career', 'category'
     ];
 
     /**
@@ -49,12 +49,20 @@ class User extends Authenticatable
         return $this->BelongsToMany(Post::class, 'bookmarks');
     }
 
+    public function getBase64ImageAttribute(): ?string
+    {
+        if (!$this->image) {
+            return null;
+        }
+        return 'data:image/png;base64,' . $this->image;
+    }
+
     public function getImageUrlAttribute(): ?string
     {
-    if (!$this->filepath) {
-        return null;
-    }
-    return Storage::url($this->filepath);
+        if (!$this->filepath) {
+            return null;
+        }
+        return Storage::url($this->filepath);
     }
 
     public function notifications()

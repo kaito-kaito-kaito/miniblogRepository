@@ -5,8 +5,8 @@
     @forelse($posts as $post)
       <div class="card">
         <div class="card-header">
-        @if ($post->user->filepath)
-        <img src="{{ $post->user->image_url }}" alt="{{ $post->user->name }}" class="img-thumbnail" style="width: 100px" >
+        @if ($post->user->base64Image)
+        <img src="{{ $post->user->base64Image }}" alt="{{ $post->user->name }}" class="img-thumbnail" style="width: 100px" >
         @endif
         {{ $post->user->name }}
         </div>

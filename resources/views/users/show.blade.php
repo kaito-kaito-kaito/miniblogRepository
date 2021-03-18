@@ -6,8 +6,8 @@
         <div class="card-body">
             <div class="d-flex">
                 <div>
-                    @if ($user->filepath)
-                    <img src="{{ $user->image_url }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px" >
+                    @if ($user->base64Image)
+                    <img src="{{ $user->base64Image }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px" >
                     @endif
                     <strong>{{ $user->name }}</strong><br>
                     {{ $user->email }}

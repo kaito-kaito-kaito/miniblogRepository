@@ -23,12 +23,14 @@ class UserController extends Controller
 
     public function update(UpdateRequest $request)
     {
-
         $user = Auth::user();
         $form = $request->validated();
         if($request->file !== null)
         {
-            $form += ['filepath' => $request->file->store('user/images')];
+            $path = $request->file->getRealPath();
+            $file = file_get_contents($path);
+            $image = base64_encode($file);
+            $form += compact('image');
         }
         $user->fill($form);
         $user->save();
