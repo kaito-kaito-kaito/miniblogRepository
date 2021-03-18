@@ -18,9 +18,9 @@
           <form method="POST" action="{{ route('users.update') }}" enctype="multipart/form-data">
             @csrf
 
-            @if ($user->filepath)
+            @if ($user->base64Image)
             <div class="text-center">
-            <img src="{{ $user->image_url }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px">
+              <img src="{{ $user->base64Image }}" alt="{{ $user->name }}" class="img-thumbnail" style="width: 200px">
             </div>
             @endif
 
