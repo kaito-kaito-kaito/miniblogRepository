@@ -26,6 +26,9 @@
     <div class="card w-50">
     @endif
         <div class="card-header">
+            @if ($message->member->user->base64Image)
+            <img src="{{ $message->member->user->base64Image }}" alt="{{ $message->member->user->name }}" class="img-thumbnail" style="width: 100px" >
+            @endif
             {{ $message->member->user->name }}
         </div>
         <div class="card-body">
